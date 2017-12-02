@@ -163,7 +163,7 @@ def main_loop(current_wf, goal_wf):
     end_time = current_wf.length # np.random.random() * (current_wf.length - start_time) + start_time
     FREQ_LR = INITIAL_FREQ_LR
     AMP_LR = INITIAL_AMP_LR
-    TIME_LR = max(INITIAL_TIME_LR, current_wf.length/50)
+    TIME_LR = max(INITIAL_TIME_LR, current_wf.length/10)
     # set the initial loss to be the loss function
     initial_loss = loss_function(current_wf, goal_wf, Sine(freq, 0, start_time, end_time).to_waveform_like(current_wf))
     print("Initial loss: ", initial_loss)
